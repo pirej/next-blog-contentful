@@ -7,7 +7,7 @@ export default function Layout({ children }) {
   return (
     <div className="layout">
       <nav className="navbar">
-        <div>
+        <div className="navlogo">
           <Link href="/" passHref>
             <Image src={logoimg} alt="logo" className="logo" />
           </Link>

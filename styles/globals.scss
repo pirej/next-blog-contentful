@@ -1,8 +1,14 @@
+@import "./variables.scss";
+
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+//
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+//
+// @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
 
 body {
-  background: #d0e4fc;
+  background: $white;
+  color: $darkblue;
   margin: 0;
   font-family: "Roboto";
   /* font-size: 1.5em; */
@@ -13,31 +19,42 @@ body {
   flex-direction: column;
 }
 
+.navlogo {
+  display: flex;
+}
 nav {
+  background-color: $blackblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0 0 1rem;
+  padding: 0.5rem 0 0.5rem 1.2rem;
 }
 
 nav a {
-  color: #29344a;
+  color: $lightgrey;
   padding-right: 2rem;
-  /* margin-top: 2rem; */
+  text-decoration: none;
+}
+
+nav img {
+  width: 130px;
 }
 
 .logo {
   cursor: pointer;
-  padding-top: 1rem;
 }
 
 header {
+  background-color: $blackblue;
   text-align: center;
-  margin: 60px 0;
+  margin-bottom: 2rem;
+  padding: 0.6rem 0 4rem 0;
+  // padding: 2rem 0;
+  background-image: url("../public/web.jpg");
 }
 header a {
   text-decoration: none;
-  color: #29344a;
+  color: $darkblue;
   text-transform: uppercase;
   display: inline-block;
 }
@@ -46,24 +63,31 @@ header h2 {
   margin: 0;
 }
 header span {
+  color: $lightgrey;
   display: block;
   line-height: 1em;
+  text-shadow: 0px 3px 2px $blackblue;
 }
 header span:first-child {
-  font-size: 1em;
+  font-size: 0.8em;
+  letter-spacing: 0.3em;
   font-weight: 400;
 }
 header span:last-child {
   font-size: 1.5em;
+  letter-spacing: 0.1em;
   font-weight: 800;
 }
 header h2 {
   font-size: 1.2em;
   font-weight: 400;
+  letter-spacing: 0.3em;
+  color: rgba($color: $lightgrey, $alpha: 0.5);
 }
+
 footer {
-  background: #29344a;
-  color: #c5d1e5;
+  background: $blackblue;
+  color: $lightgrey;
   padding: 10px;
   text-align: center;
   margin-top: auto;
