@@ -7,23 +7,25 @@ export default function Layout({ children }) {
   return (
     <div className="layout">
       <nav className="navbar">
-        <div className="navlogo">
-          <Link href="/">
-            <a>
-              <Image src={logoimg} alt="logo" className="logo" />
-            </a>
-          </Link>
-        </div>
-        <div>
-          <Link href="#">
-            <a className="link">link1</a>
-          </Link>
-          <Link href="#">
-            <a className="link">link2</a>
-          </Link>
-          <Link href="#">
-            <a className="link">link3</a>
-          </Link>
+        <div className="nav-content">
+          <div className="navlogo">
+            <Link href="/">
+              <a>
+                <Image src={logoimg} alt="logo" className="logo" />
+              </a>
+            </Link>
+          </div>
+          <div>
+            <Link href="#">
+              <a className="link">link1</a>
+            </Link>
+            <Link href="#">
+              <a className="link">link2</a>
+            </Link>
+            <Link href="#">
+              <a className="link">link3</a>
+            </Link>
+          </div>
         </div>
       </nav>
       <header>

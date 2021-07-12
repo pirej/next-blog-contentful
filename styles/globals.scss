@@ -19,29 +19,32 @@ body {
   flex-direction: column;
 }
 
-.navlogo {
-  display: flex;
-}
-nav {
+.navbar {
   background-color: $blackblue;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0 0.5rem 1.2rem;
-}
 
-nav a {
-  color: $lightgrey;
-  padding-right: 2rem;
-  text-decoration: none;
-}
+  .nav-content {
+    max-width: 1200px;
+    margin: 0 auto 0;
+    color: red;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0 0.2rem 0;
+    justify-content: space-between;
 
-nav img {
-  width: 130px;
-}
+    .navlogo {
+      margin-left: 1rem;
+      img {
+        width: 130px;
+        cursor: pointer;
+      }
+    }
 
-.logo {
-  cursor: pointer;
+    a {
+      color: $lightgrey;
+      padding-right: 2rem;
+      text-decoration: none;
+    }
+  }
 }
 
 header {
