@@ -8,8 +8,10 @@ export default function Layout({ children }) {
     <div className="layout">
       <nav className="navbar">
         <div className="navlogo">
-          <Link href="/" passHref>
-            <Image src={logoimg} alt="logo" className="logo" />
+          <Link href="/">
+            <a>
+              <Image src={logoimg} alt="logo" className="logo" />
+            </a>
           </Link>
         </div>
         <div>
