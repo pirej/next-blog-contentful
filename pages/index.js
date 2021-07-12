@@ -1,11 +1,12 @@
 import { createClient } from "contentful";
+import PostCard from "../components/PostCard";
 
 export default function Home({ posts }) {
   console.log(posts);
   return (
     <div>
       {posts.map(post => (
-        <div key="post.sys.id">{post.fields.title}</div>
+        <PostCard key={post.sys.id} post={post} />
       ))}
     </div>
   );
