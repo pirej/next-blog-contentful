@@ -2,7 +2,13 @@ import { createClient } from "contentful";
 
 export default function Home({ posts }) {
   console.log(posts);
-  return <div>home content</div>;
+  return (
+    <div>
+      {posts.map(post => (
+        <div key="post.sys.id">{post.fields.title}</div>
+      ))}
+    </div>
+  );
 }
 
 export async function getStaticProps() {
