@@ -98,7 +98,50 @@ footer {
 .page-content {
   max-width: 1200px;
   margin: 20px auto 80px;
-  padding: 0 20px;
+  // padding: 0 20px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.card {
+  text-align: center;
+  .featured {
+    width: 95%;
+    margin: 0 auto 0 auto;
+
+    @media only screen and (max-width: 1136px) {
+      max-width: 100%;
+    }
+    @media only screen and (max-width: 360px) {
+      max-width: 92%;
+    }
+  }
+}
+
+.postGrid {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 50%;
+  justify-content: center;
+}
+
+// the post card
+.content {
+  background-color: $lightgrey;
+  max-width: 600px;
+  margin: 0 0.9rem 0 0.9rem;
+}
+.info {
+  font-size: 1.5rem;
+
+  h4 {
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 0.8rem;
+  }
+}
+.actions {
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  padding-bottom: 1.2rem;
 }

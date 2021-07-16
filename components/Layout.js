@@ -22,9 +22,6 @@ export default function Layout({ children }) {
             <Link href="#">
               <a className="link">link2</a>
             </Link>
-            <Link href="#">
-              <a className="link">link3</a>
-            </Link>
           </div>
         </div>
       </nav>

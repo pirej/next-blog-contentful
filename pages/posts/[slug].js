@@ -1,5 +1,6 @@
 import { createClient } from "contentful";
 import Image from "next/image";
+import styles from "./slug.module.scss";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 export default function BlogDetails({ post }) {
@@ -7,7 +8,7 @@ export default function BlogDetails({ post }) {
   const { featuredImage, title, requirements, content } = post.fields;
   return (
     <div>
-      <div className="banner">
+      <div className={styles.banner}>
         <Image
           src={`https:${featuredImage.fields.file.url}`}
           width={featuredImage.fields.file.details.image.width}
@@ -16,13 +17,13 @@ export default function BlogDetails({ post }) {
         />
         <h2>{title}</h2>
       </div>
-      <div className="reqs">
+      <div className={styles.requirements}>
         <h3>Requirements:</h3>
         {requirements.map(req => (
           <span key={req}>{req}</span>
         ))}
       </div>
-      <div className="content">
+      <div className={styles.content}>
         <div>{documentToReactComponents(content)}</div>
       </div>
     </div>

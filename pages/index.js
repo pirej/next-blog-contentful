@@ -4,7 +4,7 @@ import PostCard from "../components/PostCard";
 export default function Home({ posts }) {
   console.log(posts);
   return (
-    <div>
+    <div className="postGrid">
       {posts.map(post => (
         <PostCard key={post.sys.id} post={post} />
       ))}
