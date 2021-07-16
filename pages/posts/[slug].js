@@ -2,9 +2,11 @@ import { createClient } from "contentful";
 import Image from "next/image";
 import styles from "./slug.module.scss";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import Skeleton from "../../components/Skeleton";
 
 export default function BlogDetails({ post }) {
-  console.log(post);
+  // console.log(post);
+  if (!post) return <Skeleton />;
   const { featuredImage, title, requirements, content } = post.fields;
   return (
     <div>
@@ -49,7 +51,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths: paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -60,9 +62,20 @@ export async function getStaticProps({ params }) {
   const { items } = await client.getEntries({
     content_type: "webdev",
     "fields.slug": params.slug,
-  });
+  })
+
+  if(!items.length) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false
+      }
+    }
+  }
+
 
   return {
     props: { post: items[0] },
+    revalidate: 1,
   };
 }
