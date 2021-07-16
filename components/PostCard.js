@@ -21,7 +21,7 @@ function PostCard({ post }) {
         </div>
         <div className="actions">
           <Link href={`/posts/${slug}`}>
-            <a>Read more</a>
+            <a className="a404 acard">Read more</a>
           </Link>
         </div>
       </div>

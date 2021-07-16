@@ -145,3 +145,36 @@ footer {
   margin-top: 0.5rem;
   padding-bottom: 1.2rem;
 }
+
+.title404 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.a404 {
+  text-decoration: none;
+  width: 4.5rem;
+  margin: auto;
+  display: block;
+  padding: 0.6rem 0.8rem;
+  color: $blackblue;
+  background-color: $warning;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.a404:hover {
+  font-weight: 500;
+}
+
+.a404:active {
+  width: 4.45rem;
+  padding: 0.55rem 0.75rem;
+}
+
+.acard {
+  width: 5rem;
+}
