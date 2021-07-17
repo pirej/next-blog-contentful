@@ -131,6 +131,17 @@ footer {
         padding-top: 1rem;
         padding-bottom: 0.8rem;
       }
+
+      hr {
+        display: block;
+        height: 2px;
+        border: 0;
+        border-top: 1px solid $lightgrey;
+        padding: 0;
+        width: 80%;
+        margin: 0.5rem auto 0 auto;
+      }
+
       .actions {
         margin-bottom: 2rem;
         margin-top: 0.5rem;
@@ -182,7 +193,7 @@ footer {
   width: 5rem;
   position: relative;
   right: -13.75rem;
-  top: -5rem;
+  top: -5.7rem;
   @media only screen and (max-width: 600px) {
     right: -35vw;
   }

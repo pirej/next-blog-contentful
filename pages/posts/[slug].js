@@ -17,12 +17,20 @@ export default function BlogDetails({ post }) {
           height={featuredImage.fields.file.details.image.height}
           alt={featuredImage.fields.title}
         />
-        <h2>{title}</h2>
+        <h2 className={styles.postTitle}>{title}</h2>
       </div>
+      <h3 className={styles.reqTitle}>Requirements:</h3>
       <div className={styles.requirements}>
-        <h3>Requirements:</h3>
         {requirements.map(req => (
-          <span key={req}>{req}</span>
+          <>
+            <ul className={styles.ul}>
+              <li className={styles.li}>
+                <span className={styles.span} key={req}>
+                  {req}
+                </span>
+              </li>
+            </ul>
+          </>
         ))}
       </div>
       <div className={styles.content}>
@@ -62,17 +70,16 @@ export async function getStaticProps({ params }) {
   const { items } = await client.getEntries({
     content_type: "webdev",
     "fields.slug": params.slug,
-  })
+  });
 
-  if(!items.length) {
+  if (!items.length) {
     return {
       redirect: {
-        destination: '/',
-        permanent: false
-      }
-    }
+        destination: "/",
+        permanent: false,
+      },
+    };
   }
-
 
   return {
     props: { post: items[0] },

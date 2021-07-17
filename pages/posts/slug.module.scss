@@ -1,13 +1,42 @@
-.banner {
-  // background-color: red;
-  // margin: 0 auto 0;
-  //
+.postTitle {
+  letter-spacing: 0.03rem;
+  font-size: 1.5rem;
 }
 
+.reqTitle {
+  letter-spacing: 0.05rem;
+}
 .requirements {
-  //
+  columns: 4;
+  -webkit-columns: 4;
+  -moz-columns: 4;
+  .ul {
+    margin-top: 0;
+    letter-spacing: 0.03rem;
+  }
+
+  @media only screen and (max-width: 1136px) {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+  }
+  @media only screen and (max-width: 768px) {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
 }
 
 .content {
-  //
+  // font-size: 1.2;
+  b {
+    // color: red;
+    font-size: 1.5rem;
+  }
+  p {
+    // color: red;
+    font-size: 1.1rem;
+    // letter-spacing: 0.02rem;
+    word-spacing: 0.12rem;
+  }
 }

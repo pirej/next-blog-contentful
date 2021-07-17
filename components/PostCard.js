@@ -18,6 +18,7 @@ function PostCard({ post }) {
       <div className="content">
         <div className="info">
           <h4>{title}</h4>
+          <hr />
         </div>
         <div className="actions">
           <Link href={`/posts/${slug}`}>
