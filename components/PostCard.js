@@ -14,16 +14,16 @@ function PostCard({ post }) {
           // height={thumbnail.fields.file.details.image.height}
           alt={featuredImage.fields.file.title}
         />
+        <div className="actions">
+          <Link href={`/posts/${slug}`}>
+            <a className="a404 acard">Read more</a>
+          </Link>
+        </div>
       </div>
       <div className="content">
         <div className="info">
           <h4>{title}</h4>
           <hr />
-        </div>
-        <div className="actions">
-          <Link href={`/posts/${slug}`}>
-            <a className="a404 acard">Read more</a>
-          </Link>
         </div>
       </div>
     </div>
