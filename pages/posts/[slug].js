@@ -20,9 +20,8 @@ export default function BlogDetails({ post }) {
       </div>
       <div className={styles.allContent}>
         <h2 className={styles.postTitle}>{title}</h2>
-        <hr className={styles.hr1} />
+        <hr className={styles.hr} />
         <h3 className={styles.reqTitle}>Requirements:</h3>
-        <hr className={styles.hr2} />
         <div className={styles.requirements}>
           {requirements.map(req => (
             <>
@@ -36,11 +35,10 @@ export default function BlogDetails({ post }) {
             </>
           ))}
         </div>
-        <hr className={styles.hr3} />
         <div className={styles.content}>
           <div>{documentToReactComponents(content)}</div>
         </div>
-        <hr className={styles.hr4} />
+        <hr className={styles.hr2} />
       </div>
     </div>
   );

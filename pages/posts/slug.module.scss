@@ -14,22 +14,19 @@
   .reqTitle {
     font-weight: 400;
     font-size: 1.1rem;
-    margin: 0 1rem;
+    margin: 1rem 1rem;
     @media only screen and (max-width: 360px) {
       font-size: 1rem;
     }
   }
 
-  .hr1 {
+  .hr {
     margin-bottom: 0rem auto 0.3rem auto;
     width: 60%;
   }
   .hr2 {
-    margin: 0.4rem 0 0.5rem 0;
-  }
-  .hr4 {
     width: 60%;
-    margin: 0rem auto 0 auto;
+    margin: 0 auto 0 auto;
   }
   .requirements {
     columns: 4;
@@ -58,7 +55,7 @@
   }
   .content {
     font-weight: 500;
-    margin: 0 1rem;
+    margin: 0 1rem 2rem 1rem;
 
     b {
       font-size: 1.3rem;
