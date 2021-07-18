@@ -17,24 +17,30 @@ export default function BlogDetails({ post }) {
           height={featuredImage.fields.file.details.image.height}
           alt={featuredImage.fields.title}
         />
+      </div>
+      <div className={styles.allContent}>
         <h2 className={styles.postTitle}>{title}</h2>
-      </div>
-      <h3 className={styles.reqTitle}>Requirements:</h3>
-      <div className={styles.requirements}>
-        {requirements.map(req => (
-          <>
-            <ul className={styles.ul}>
-              <li className={styles.li}>
-                <span className={styles.span} key={req}>
-                  {req}
-                </span>
-              </li>
-            </ul>
-          </>
-        ))}
-      </div>
-      <div className={styles.content}>
-        <div>{documentToReactComponents(content)}</div>
+        <hr className={styles.hr1} />
+        <h3 className={styles.reqTitle}>Requirements:</h3>
+        <hr className={styles.hr2} />
+        <div className={styles.requirements}>
+          {requirements.map(req => (
+            <>
+              <ul className={styles.ul}>
+                <li className={styles.li}>
+                  <span className={styles.span} key={req}>
+                    {req}
+                  </span>
+                </li>
+              </ul>
+            </>
+          ))}
+        </div>
+        <hr className={styles.hr3} />
+        <div className={styles.content}>
+          <div>{documentToReactComponents(content)}</div>
+        </div>
+        <hr className={styles.hr4} />
       </div>
     </div>
   );
