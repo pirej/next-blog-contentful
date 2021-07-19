@@ -239,33 +239,29 @@ footer {
 
 .a404:hover {
   font-weight: 500;
+  background-color: $lightblue;
 }
 
 .a404:active {
   font-weight: 500;
-  background-color: $lightblue;
+  background-color: $medblue;
 }
 
 .acard {
   z-index: 100;
-  width: 5rem;
   position: relative;
-  right: -13.75rem;
-  top: -1.5rem;
-  @media only screen and (max-width: 600px) {
-    right: -35vw;
-  }
-  @media only screen and (max-width: 500px) {
-    right: -30vw;
-    font-size: 0.9rem;
-    width: 4.7rem;
-    top: -1.2rem;
+  right: -8rem;
+  top: -1.2rem;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.4rem;
+  @media only screen and (max-width: 380px) {
+    right: -7rem;
+    padding: 0.35rem 0.35rem;
   }
   @media only screen and (max-width: 360px) {
-    right: -28vw;
-    font-size: 0.9rem;
-    width: 4.5rem;
-    padding: 0.4rem 0.6rem;
-    top: -1.2rem;
+    right: -6.5rem;
+  }
+  @media only screen and (max-width: 340px) {
+    right: -6rem;
   }
 }
