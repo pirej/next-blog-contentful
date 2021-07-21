@@ -2,7 +2,7 @@ import { createClient } from "contentful";
 import PostCard from "../components/PostCard";
 
 export default function Home({ posts }) {
-  console.log(posts);
+  // console.log(posts);
   return (
     <div className="postGrid">
       {posts.map(post => (

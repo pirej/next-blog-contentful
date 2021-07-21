@@ -10,7 +10,7 @@ async function callContentful(query) {
       {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
+          Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ query }),
