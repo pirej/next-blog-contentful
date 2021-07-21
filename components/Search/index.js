@@ -1,5 +1,7 @@
 import algoliasearch from "algoliasearch/lite";
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom";
+import CustomSearchBox from "./CustomSearchBox";
+import CustomHits from "./CustomHits";
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
@@ -13,8 +15,8 @@ export default function Search() {
         searchClient={searchClient}
         indexName="first-next-contentful-blog"
       >
-        <SearchBox />
-        <Hits />
+        <CustomSearchBox />
+        <CustomHits />
       </InstantSearch>
     </>
   );
