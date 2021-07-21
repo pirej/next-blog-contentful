@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentful/rich-text-plain-text-renderer": "^15.0.0",
     "@contentful/rich-text-react-renderer": "^15.0.0",
     "algoliasearch": "^4.10.3",
     "contentful": "^8.4.2",
