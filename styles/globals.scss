@@ -40,11 +40,18 @@ body {
       }
     }
 
-    a {
-      color: $lightgrey;
+    .searchForm {
       padding-right: 2rem;
-      text-decoration: none;
+      @media only screen and (max-width: 600px) {
+        padding-right: 0;
+      }
     }
+
+    // a {
+    //   color: $lightgrey;
+    //   padding-right: 2rem;
+    //   text-decoration: none;
+    // }
   }
 }
 

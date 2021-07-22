@@ -2,8 +2,10 @@
 
 .instantSearch {
   z-index: 200;
-  position: absolute;
-  margin-top: -2.45rem;
+  position: relative;
+  color: $lightgrey;
+
+  // margin-top: -2.45rem;
 }
 
 .instantSearch__form {
@@ -13,7 +15,19 @@
   background-color: rgba($color: $lightgrey, $alpha: 0.3);
   height: 1.7rem;
   border-radius: 0.3rem;
-  border: 0.0125rem solid rgba($color: $lightgrey, $alpha: 0.5);
+  // border: 0.0125rem solid rgba($color: $lightgrey, $alpha: 0.5);
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 480px) {
+    // font-size: 0.53em;
+  }
+  @media only screen and (max-width: 420px) {
+    width: 70%;
+  }
+  @media only screen and (max-width: 320px) {
+    // font-size: 0.35em;
+  }
 }
 
 .instantSearch__label {
@@ -22,6 +36,10 @@
   margin-bottom: 1rem;
   padding: 0 0.5rem;
   display: block;
+}
+
+.instantSearch__input::placeholder {
+  color: $lightgrey;
 }
 
 .instantSearch__input {
@@ -34,22 +52,24 @@
   width: 100%;
   background-color: rgba($color: $lightgrey, $alpha: 0.1);
   padding: 0 0.5rem 0 0.5rem;
+  color: $white;
 }
 
 .instantSearch__input:focus,
 .instantSearch__reset:focus {
   outline: none;
   -webkit-appearance: none;
-  box-shadow: $lightgrey 0 0 0 0.05rem;
+  box-shadow: $lightgrey 0 0 0.1rem 0.05rem;
 }
 
 .instantSearch__hits {
+  color: $blackblue;
   position: absolute;
   // top: 7rem;
   width: 100%;
-  background-color: rgba($color: $white, $alpha: 0.85);
+  background-color: rgba($color: $white, $alpha: 0.9);
   border-radius: 0.3rem;
-  border: 0.0125rem solid rgba($color: $lightgrey, $alpha: 0.5);
+  // border: 0.0125rem solid rgba($color: $lightgrey, $alpha: 0.5);
 }
 
 .instantSearch__hitsList {
@@ -68,6 +88,7 @@
 }
 
 .instantSearch__noResults {
+  color: $blackblue;
   padding: 0.5rem;
   font-size: 1.2rem;
   line-height: 1.6;

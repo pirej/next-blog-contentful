@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logoimg from "../public/logo.svg";
+import Search from "./Search";
 
 export default function Layout({ children }) {
   let date = new Date().getFullYear();
@@ -15,13 +16,14 @@ export default function Layout({ children }) {
               </a>
             </Link>
           </div>
-          <div>
-            <Link href="#">
+          <div className="searchForm">
+            {/* <Link href="#">
               <a className="link">link1</a>
             </Link>
             <Link href="#">
               <a className="link">link2</a>
-            </Link>
+            </Link> */}
+            <Search />
           </div>
         </div>
       </nav>

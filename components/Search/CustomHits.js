@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { connectStateResults } from "react-instantsearch-dom";
 import styles from "../../styles/InstantSearch.module.scss";
 
@@ -18,7 +19,9 @@ function Hits({ searchState, searchResults }) {
               key={hit.objectID}
               className={styles.instantSearch__hitsListItem}
             >
-              {hit.title}
+              <Link href={`posts/${hit.slug}`}>
+                <a>{hit.title}</a>
+              </Link>
             </li>
           ))}
         </ol>

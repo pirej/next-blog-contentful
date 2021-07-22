@@ -6,7 +6,6 @@ export default function Home({ posts }) {
   // console.log(posts);
   return (
     <div className="postGrid">
-      <Search />
       {posts.map(post => (
         <PostCard key={post.sys.id} post={post} />
       ))}
