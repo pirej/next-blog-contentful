@@ -1,0 +1,77 @@
+@import "./variables.scss";
+
+.instantSearch {
+  z-index: 200;
+  position: absolute;
+  margin-top: -2.45rem;
+}
+
+.instantSearch__form {
+  display: flex;
+  position: relative;
+  width: 100%;
+  background-color: rgba($color: $lightgrey, $alpha: 0.3);
+  height: 1.7rem;
+  border-radius: 0.3rem;
+  border: 0.0125rem solid rgba($color: $lightgrey, $alpha: 0.5);
+}
+
+.instantSearch__label {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+  display: block;
+}
+
+.instantSearch__input {
+  -webkit-appearance: none;
+  font-size: 1rem;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  border: none;
+  transition: box-shadow 0.2s ease 0s;
+  width: 100%;
+  background-color: rgba($color: $lightgrey, $alpha: 0.1);
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+.instantSearch__input:focus,
+.instantSearch__reset:focus {
+  outline: none;
+  -webkit-appearance: none;
+  box-shadow: $lightgrey 0 0 0 0.05rem;
+}
+
+.instantSearch__hits {
+  position: absolute;
+  // top: 7rem;
+  width: 100%;
+  background-color: rgba($color: $white, $alpha: 0.85);
+  border-radius: 0.3rem;
+  border: 0.0125rem solid rgba($color: $lightgrey, $alpha: 0.5);
+}
+
+.instantSearch__hitsList {
+  list-style: none;
+  padding: 0.8rem 0;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.instantSearch__hitsListItem {
+  padding: 0 1rem;
+}
+
+.instantSearch__hitsListItem {
+  padding-bottom: 0.5rem;
+}
+
+.instantSearch__noResults {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  background-color: rgba($color: $warning, $alpha: 0.7);
+  border-radius: 0.3rem;
+  margin: 0;
+}
