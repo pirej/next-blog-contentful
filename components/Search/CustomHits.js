@@ -19,7 +19,7 @@ function Hits({ searchState, searchResults }) {
               key={hit.objectID}
               className={styles.instantSearch__hitsListItem}
             >
-              <Link href={`posts/${hit.slug}`}>
+              <Link href={`/posts/${hit.slug}`}>
                 <a>{hit.title}</a>
               </Link>
             </li>

@@ -1,17 +1,18 @@
 import { connectSearchBox } from "react-instantsearch-dom";
+import { FaSearch } from "react-icons/fa";
 import styles from "../../styles/InstantSearch.module.scss";
 
 function SearchBox({ refine }) {
   return (
     <form action="" role="search" className={styles.instantSearch__form}>
       <label htmlFor="algolia_search" className={styles.instantSearch__label}>
-        Search
+        <FaSearch />
       </label>
       <input
         className={styles.instantSearch__input}
         id="algolia_search"
         type="search"
-        placeholder="type here.."
+        placeholder="search.."
         onChange={e => refine(e.currentTarget.value)}
       />
     </form>
