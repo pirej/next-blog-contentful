@@ -92,6 +92,16 @@
 .instantSearch__hitsListItem {
   padding-bottom: 0.5rem;
 }
+.instantSearch__hitsListItem {
+  a {
+    color: $medblue;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $nextblue;
+    font-weight: 500;
+  }
+}
 
 .instantSearch__noResults {
   color: $blackblue;
