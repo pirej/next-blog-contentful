@@ -16,14 +16,18 @@ function Hits({ searchState, searchResults }) {
   }, [validQuery]);
 
   return (
-    <div className={styles.instantSearch__hits}>
-      {searchResults?.hits.length === 0 && validQuery && (
-        <p className={styles.instantSearch__noResults}>
-          Aw snap! No search results were found.
-        </p>
-      )}
+    <div
+      className={styles.instantSearch__hits}
+      onClick={e => OnclickHandler(e)}
+    >
       {showResults && (
         <>
+          {searchResults?.hits.length === 0 && validQuery && (
+            <p className={styles.instantSearch__noResults}>
+              Aw snap! No search results were found.
+            </p>
+          )}
+
           {searchResults?.hits.length > 0 && validQuery && (
             <ol className={styles.instantSearch__hitsList}>
               {searchResults.hits.map(hit => (
@@ -32,7 +36,7 @@ function Hits({ searchState, searchResults }) {
                   className={styles.instantSearch__hitsListItem}
                 >
                   <Link href={`/posts/${hit.slug}`}>
-                    <a onClick={e => OnclickHandler(e)}>{hit.title}</a>
+                    <a>{hit.title}</a>
                   </Link>
                 </li>
               ))}
