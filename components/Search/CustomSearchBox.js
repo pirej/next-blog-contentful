@@ -37,12 +37,14 @@ function SearchBox({ refine }) {
         id="algolia_search"
         type="search"
         value={newSearch}
+        accessKey="r"
         placeholder="search.."
         onChange={e => {
           refine(e.currentTarget.value);
           setNewSearch(e.currentTarget.value);
         }}
       />
+      <button className={styles.close_icon} accessKey="r" type="reset"></button>
     </form>
   );
 }
