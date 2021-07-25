@@ -138,12 +138,12 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    padding: 4px 5px;
+    padding: 5px 5px;
     border-radius: 50%;
     text-align: center;
-    color: $lightgrey;
+    color: rgba($color: $lightgrey, $alpha: 0.5);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.9rem;
     cursor: pointer;
   }
   .instantSearch__input:not(:valid) ~ .close_icon {
