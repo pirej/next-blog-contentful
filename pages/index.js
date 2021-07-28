@@ -1,14 +1,17 @@
+import { useState } from "react";
 import { createClient } from "contentful";
 import PostCard from "../components/PostCard";
-import Search from "../components/Search";
 
-export default function Home({ posts }) {
-  // console.log(posts);
+export default function Home() {
+  const [pageIndex, setPageIndex] = useState(0);
   return (
     <div className="postGrid">
-      {posts.map(post => (
-        <PostCard key={post.sys.id} post={post} />
-      ))}
+      <PostCard index={pageIndex} />
+      <div style={{ display: "none" }}>
+        <PostCard index={pageIndex + 1} />
+      </div>
+      <button onClick={() => setPageIndex(pageIndex - 1)}>Previous</button>
+      <button onClick={() => setPageIndex(pageIndex + 1)}>Next</button>
     </div>
   );
 }
