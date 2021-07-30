@@ -277,3 +277,23 @@ footer {
     right: -6rem;
   }
 }
+
+/// pagination icons start ///
+.Icons {
+  display: flex;
+  align-items: center;
+  margin: 0 0.3rem;
+  background-color: $lightgrey;
+  border-style: none;
+  border-radius: 10%;
+}
+
+.Icons:hover {
+  background-color: $lightblue;
+}
+
+.Icons:active {
+  background-color: $medblue;
+}
+
+/// pagination icons end ///
