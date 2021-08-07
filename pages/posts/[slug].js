@@ -24,15 +24,13 @@ export default function BlogDetails({ post }) {
         <h3 className={styles.reqTitle}>Requirements:</h3>
         <div className={styles.requirements}>
           {requirements.map(req => (
-            <>
+            <div key={req}>
               <ul className={styles.ul}>
                 <li className={styles.li}>
-                  <span className={styles.span} key={req}>
-                    {req}
-                  </span>
+                  <span className={styles.span}>{req}</span>
                 </li>
               </ul>
-            </>
+            </div>
           ))}
         </div>
         <div className={styles.content}>

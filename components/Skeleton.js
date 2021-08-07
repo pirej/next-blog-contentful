@@ -6,8 +6,6 @@ export default function Skeleton() {
       <div className={styles.banner}></div>
       <div className={styles.header}></div>
       <div className={styles.content}></div>
-      <div className={styles.content}></div>
-      <div className={styles.content}></div>
     </div>
   );
 }
