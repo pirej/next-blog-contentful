@@ -11,16 +11,22 @@ export default function BlogDetails({ post }) {
   return (
     <div>
       <div className={styles.banner}>
-        <Image
-          src={`https:${featuredImage.fields.file.url}`}
-          width={featuredImage.fields.file.details.image.width}
-          height={featuredImage.fields.file.details.image.height}
-          alt={featuredImage.fields.title}
-        />
+        <div className="image-wrapper">
+          <Image
+            src={`https:${featuredImage.fields.file.url}`}
+            width={featuredImage.fields.file.details.image.width}
+            height={featuredImage.fields.file.details.image.height}
+            alt={featuredImage.fields.title}
+          />
+        </div>
       </div>
       <div className={styles.allContent}>
         <h2 className={styles.postTitle}>{title}</h2>
         <hr className={styles.hr} />
+        <div className={styles.content}>
+          <div>{documentToReactComponents(content)}</div>
+        </div>
+        <hr className={styles.hr2} />
         <h3 className={styles.reqTitle}>Requirements:</h3>
         <div className={styles.requirements}>
           {requirements.map(req => (
@@ -33,10 +39,6 @@ export default function BlogDetails({ post }) {
             </div>
           ))}
         </div>
-        <div className={styles.content}>
-          <div>{documentToReactComponents(content)}</div>
-        </div>
-        <hr className={styles.hr2} />
       </div>
     </div>
   );

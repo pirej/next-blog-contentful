@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logoimg from "../public/logo.svg";
 import Search from "./Search";
+import mail from "../public/mail.png";
 
 export default function Layout({ children }) {
   let date = new Date().getFullYear();
@@ -43,6 +44,14 @@ export default function Layout({ children }) {
 
       <footer>
         <p>&copy; WebDev.Club {date}</p>
+        <a className="contact" href="mailto:igor@webdev.club">
+          <p>
+            Contact
+            <span className="image-wrapper">
+              <Image src={mail} alt="mail" />
+            </span>
+          </p>
+        </a>
       </footer>
     </div>
   );

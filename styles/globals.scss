@@ -139,11 +139,29 @@ header h2 {
 
 footer {
   background: $blackblue;
+  letter-spacing: 0.06rem;
   color: $lightgrey;
-  padding: 10px;
   text-align: center;
   margin-top: auto;
 }
+
+footer a {
+  text-decoration: none;
+  color: $lightgrey;
+}
+
+footer .contact p {
+  letter-spacing: 0.06rem;
+  margin-top: -0.6rem;
+  span {
+    margin-left: 0.4rem;
+  }
+}
+
+footer .image-wrapper > div {
+  top: 1px;
+}
+
 .page-content {
   max-width: 1200px;
   margin: 20px auto 80px;
@@ -241,7 +259,7 @@ footer {
   display: block;
   padding: 0.6rem 0.8rem;
   color: $blackblue;
-  background-color: $warning;
+  background-color: $blue;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -251,7 +269,7 @@ footer {
 
 .a404:hover {
   font-weight: 500;
-  background-color: $lightblue;
+  background-color: $react;
 }
 
 .a404:active {
@@ -277,3 +295,17 @@ footer {
     right: -6rem;
   }
 }
+
+// image styles
+img {
+  border-radius: 5px;
+}
+
+.image-wrapper > div {
+  overflow: visible !important;
+  box-shadow: 0px 7px 7px -3px rgba(0, 0, 0, 0.44);
+  -webkit-box-shadow: 0px 7px 7px -3px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 0px 7px 7px -3px rgba(0, 0, 0, 0.44);
+}
+
+// ------------

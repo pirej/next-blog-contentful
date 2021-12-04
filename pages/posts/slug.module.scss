@@ -12,9 +12,10 @@
     }
   }
   .reqTitle {
-    font-weight: 400;
+    // font-weight: 400;
     font-size: 1.1rem;
     margin: 1rem 1rem;
+    letter-spacing: 0.01rem;
     @media only screen and (max-width: 360px) {
       font-size: 1rem;
     }
@@ -34,6 +35,8 @@
     -moz-columns: 4;
     .ul {
       margin-top: 0;
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
     }
 
     @media only screen and (max-width: 1136px) {
@@ -53,9 +56,20 @@
       font-size: 0.8rem;
     }
   }
+
+  $background: hsla(214, 42%, 74%, 0.5);
   .content {
-    font-weight: 500;
-    margin: 0 1rem 2rem 1rem;
+    font-weight: 400;
+    margin: 1rem 0rem 1rem 0rem;
+    letter-spacing: 0.015rem;
+    background-color: $background;
+    padding: 0.4rem 1.1rem 1rem 1.1rem;
+    line-height: 1.2rem;
+    ///-----border blur-----------
+    -webkit-box-shadow: 0px 0px 5px 5px $background; /* WebKit */
+    -moz-box-shadow: 0px 0px 5px 5px $background; /* Firefox */
+    box-shadow: 0px 0px 5px 5px $background; /* Standard */
+    ///-----border blur-----------
 
     b {
       font-size: 1.1rem;
@@ -81,4 +95,12 @@
       }
     }
   }
+}
+
+.image-wrapper > div {
+  // background-color: teal;
+  overflow: visible !important;
+  box-shadow: 0px 7px 7px -3px rgba(0, 0, 0, 0.44);
+  -webkit-box-shadow: 0px 7px 7px -3px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 0px 7px 7px -3px rgba(0, 0, 0, 0.44);
 }
